@@ -3,6 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { RouterModule, Routes } from '@angular/router';
+import { CidadesModule } from './cidades/cidades.module';
+import { CidadesPesquisaComponent } from './cidades/cidades-pesquisa/cidades-pesquisa.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CidadesService } from './cidades/cidades.service';
+
+const routes: Routes = [
+  {path: 'cidades', component: CidadesPesquisaComponent}
+]
 
 @NgModule({
   declarations: [
@@ -10,9 +20,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    RouterModule.forRoot(routes),
+    AppRoutingModule,
+    CoreModule,
+    CidadesModule
   ],
-  providers: [],
+  providers: [CidadesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

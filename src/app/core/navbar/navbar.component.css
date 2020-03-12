@@ -1,0 +1,46 @@
+.navbar {
+    padding: 10px 0;
+    background:linear-gradient(90deg, #3dc7ef, #bdb9b8);
+}
+
+.navbar-toggle {
+ color:white;
+}
+
+.navbar-menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 210px;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    background:linear-gradient(180deg, #3dc7ef, #bdb9b8);
+    list-style: none;
+}
+
+.navbar-usuario{
+    padding: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.navbar-menuitem{
+    padding: 15px;
+
+}
+
+.navbar-menuitem a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menuitem a:hover{
+    color: black;
+    font-style: italic;
+}
